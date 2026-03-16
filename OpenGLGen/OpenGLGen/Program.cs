@@ -26,39 +26,31 @@ namespace OpenGLGen
             // Select version
             var version = spec.Versions[spec.Versions.Count - 1];
 
-            // Write Enums
-            using (var writer = new StreamWriter((Path.Combine(workingDirectory.FullName, "Enums.cs"))))
+            // Write one file per enum group
+            foreach (var groupElem in version.Groups)
             {
-                writer.WriteLine("using System;\n");
-                writer.WriteLine(namespaceText);
-                writer.WriteLine("{");
-                writer.WriteLine($"\tpublic static unsafe partial class {nativeClassText}");
-                writer.WriteLine("\t{");
+                string fileName = $"{groupElem.Name}.cs";
+                string filePath = Path.Combine(workingDirectory.FullName, fileName);
 
-                int count = 0;
-                foreach (var groupElem in version.Groups)
+                using (var writer = new StreamWriter(filePath))
                 {
-                    // Separate one line betweens enums
-                    if (count++ > 0)
-                    {
-                        writer.WriteLine();
-                    }
+                    // Optionally use modern C# namespace style
+                    writer.WriteLine($"{namespaceText};\n");
 
-                    // writer.WriteLine($"\t\tpublic enum {"Gl"+groupElem.Name} : uint");
-                    writer.WriteLine($"\t\tpublic enum {groupElem.Name} : uint");
-                    writer.WriteLine("\t\t{");
+                    // Write enum
+                    writer.WriteLine($"public enum {groupElem.Name} : uint");
+                    writer.WriteLine("{");
+
                     foreach (var enumElem in groupElem.Enums)
                     {
                         if (IsUint(enumElem.Value))
                         {
-                            writer.WriteLine($"\t\t\t{enumElem.ShortName} = {enumElem.Value},");
+                            writer.WriteLine($"\t{enumElem.ShortName} = {enumElem.Value},");
                         }
                     }
-                    writer.WriteLine("\t\t}");
-                }
 
-                writer.WriteLine("\t}");
-                writer.WriteLine("}");
+                    writer.WriteLine("}");
+                }
             }
 
             // Write Commands
