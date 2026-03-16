@@ -13,8 +13,8 @@ namespace OpenGLGen
 
             // Generate OpenGL bindings
             DirectoryInfo workingDirectory = new DirectoryInfo(Path.Combine("..", "..", "..", "..", "Evergine.Bindings.OpenGL"));
-            var api = new[] { "gl" };
-            string namespaceText = "namespace Evergine.Bindings.OpenGL";
+            var api = new[] { "gles2" };
+            string namespaceText = "namespace Engine.OpenGL";
             string nativeClassText = "GL";
             GenerateBindings(glFile, workingDirectory, api, namespaceText, nativeClassText);
         }
@@ -32,6 +32,8 @@ namespace OpenGLGen
                 writer.WriteLine("using System;\n");
                 writer.WriteLine(namespaceText);
                 writer.WriteLine("{");
+                writer.WriteLine($"\tpublic static unsafe partial class {nativeClassText}");
+                writer.WriteLine("\t{");
 
                 int count = 0;
                 foreach (var groupElem in version.Groups)
@@ -42,18 +44,20 @@ namespace OpenGLGen
                         writer.WriteLine();
                     }
 
-                    writer.WriteLine($"\tpublic enum {groupElem.Name} : uint");
-                    writer.WriteLine("\t{");
+                    // writer.WriteLine($"\t\tpublic enum {"Gl"+groupElem.Name} : uint");
+                    writer.WriteLine($"\t\tpublic enum {groupElem.Name} : uint");
+                    writer.WriteLine("\t\t{");
                     foreach (var enumElem in groupElem.Enums)
                     {
                         if (IsUint(enumElem.Value))
                         {
-                            writer.WriteLine($"\t\t{enumElem.ShortName} = {enumElem.Value},");
+                            writer.WriteLine($"\t\t\t{enumElem.ShortName} = {enumElem.Value},");
                         }
                     }
-                    writer.WriteLine("\t}");
+                    writer.WriteLine("\t\t}");
                 }
 
+                writer.WriteLine("\t}");
                 writer.WriteLine("}");
             }
 
@@ -64,15 +68,13 @@ namespace OpenGLGen
                 writer.WriteLine("using System.Runtime.InteropServices;\n");
                 writer.WriteLine(namespaceText);
                 writer.WriteLine("{");
-                writer.WriteLine($"\tpublic static unsafe class {nativeClassText}");
+                writer.WriteLine($"\tpublic static unsafe partial class {nativeClassText}");
                 writer.WriteLine("\t{");
-                writer.WriteLine("\t\tprivate static Func<string, IntPtr> s_getProcAddress;\n");
-                writer.WriteLine("\t\tprivate const CallingConvention CallConv = CallingConvention.Winapi;");
 
                 // Prototypes
                 foreach (var command in version.Commands)
                 {
-                    writer.WriteLine("\n\t\t[UnmanagedFunctionPointer(CallConv)]");
+                    writer.WriteLine("\t\t[UnmanagedFunctionPointer(CallingConvention.Cdecl)]");
 
                     // Delegate
                     StringBuilder delegateCommand = new StringBuilder("\t\tprivate delegate ");
@@ -88,12 +90,14 @@ namespace OpenGLGen
                     // public function
                     StringBuilder function = new StringBuilder($"\t\tpublic static ");
                     BuildReturnType(version, command, function);
+                    // function.Append($" {command.Name.Substring(2)}(");
                     function.Append($" {command.Name}(");
                     BuildParameterList(version, command, function);
                     function.Append($") => p_{command.Name}(");
                     BuildParameterNamesList(command, function);
                     function.Append(");");
                     writer.WriteLine(function.ToString());
+                    writer.WriteLine("");
                 }
 
                 // Helper functions
@@ -113,6 +117,7 @@ namespace OpenGLGen
                 }
                 writer.WriteLine("\t\t}\n");
 
+                writer.WriteLine("\t\tprivate static Func<string, IntPtr> s_getProcAddress;\n");
                 writer.WriteLine("\t\tprivate static void LoadFunction<T>(string name, out T field)");
                 writer.WriteLine("\t\t{");
                 writer.WriteLine("\t\t\tIntPtr funcPtr = s_getProcAddress(name);");
@@ -171,6 +176,7 @@ namespace OpenGLGen
                     groupName = "uint";
                 }
 
+                // groupName = groupName == "uint" ? groupName : "Gl"+groupName;
                 builder.Append($"{groupName}");
             }
             else
@@ -205,6 +211,7 @@ namespace OpenGLGen
                             groupName = "uint";
                         }
 
+                        // groupName = groupName == "uint" ? groupName : "Gl"+groupName;
                         builder.Append($"{groupName} {name}, ");
                     }
                     else

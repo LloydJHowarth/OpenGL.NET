@@ -23,8 +23,12 @@ namespace OpenGLGen
             foreach (var feature in file.Root.Elements("feature"))
             {
                 var apiName = feature.Attribute("api").Value;
-                if (Api.Contains(apiName))
+                var versionNumber = feature.Attribute("number").Value;
+
+                if (Api.Contains(apiName) && float.Parse(versionNumber) <= 3.0f)
                 {
+                    Console.WriteLine(apiName + " " + versionNumber);
+                    
                     var version = new GLVersion
                     {
                         Api = feature.Attribute("api").Value.ToUpper(),
