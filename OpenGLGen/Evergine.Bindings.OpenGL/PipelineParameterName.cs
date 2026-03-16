@@ -2,8 +2,11 @@ using System;
 
 namespace Engine.OpenGL
 {
-	public enum PipelineParameterName : uint
+	public static unsafe partial class GL
 	{
-		ActiveProgram = 0x8259,
+		public enum PipelineParameterName : uint
+		{
+			ActiveProgram = 0x8259,
+		}
 	}
 }

@@ -2,8 +2,11 @@ using System;
 
 namespace Engine.OpenGL
 {
-	public enum SeparableTargetEXT : uint
+	public static unsafe partial class GL
 	{
-		Separable2d = 0x8012,
+		public enum SeparableTargetEXT : uint
+		{
+			Separable2d = 0x8012,
+		}
 	}
 }

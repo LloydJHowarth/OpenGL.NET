@@ -2,9 +2,12 @@ using System;
 
 namespace Engine.OpenGL
 {
-	public enum ClipControlOrigin : uint
+	public static unsafe partial class GL
 	{
-		LowerLeft = 0x8CA1,
-		UpperLeft = 0x8CA2,
+		public enum ClipControlOrigin : uint
+		{
+			LowerLeft = 0x8CA1,
+			UpperLeft = 0x8CA2,
+		}
 	}
 }

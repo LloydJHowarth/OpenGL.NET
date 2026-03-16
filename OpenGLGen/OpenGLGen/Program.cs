@@ -39,19 +39,22 @@ namespace OpenGLGen
                     writer.WriteLine("");
                     writer.WriteLine(namespaceText);
                     writer.WriteLine("{");
+                    writer.WriteLine($"\tpublic static unsafe partial class {nativeClassText}");
+                    writer.WriteLine("\t{");
 
                     // Write enum
-                    writer.WriteLine($"\tpublic enum {groupElem.Name} : uint");
-                    writer.WriteLine("\t{");
+                    writer.WriteLine($"\t\tpublic enum {groupElem.Name} : uint");
+                    writer.WriteLine("\t\t{");
 
                     foreach (var enumElem in groupElem.Enums)
                     {
                         if (IsUint(enumElem.Value))
                         {
-                            writer.WriteLine($"\t\t{enumElem.ShortName} = {enumElem.Value},");
+                            writer.WriteLine($"\t\t\t{enumElem.ShortName} = {enumElem.Value},");
                         }
                     }
 
+                    writer.WriteLine("\t\t}");
                     writer.WriteLine("\t}");
                     writer.WriteLine("}");
                 }

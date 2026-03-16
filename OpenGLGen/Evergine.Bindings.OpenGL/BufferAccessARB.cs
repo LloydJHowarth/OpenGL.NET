@@ -2,9 +2,12 @@ using System;
 
 namespace Engine.OpenGL
 {
-	public enum BufferAccessARB : uint
+	public static unsafe partial class GL
 	{
-		ReadWrite = 0x88BA,
-		WriteOnly = 0x88B9,
+		public enum BufferAccessARB : uint
+		{
+			ReadWrite = 0x88BA,
+			WriteOnly = 0x88B9,
+		}
 	}
 }

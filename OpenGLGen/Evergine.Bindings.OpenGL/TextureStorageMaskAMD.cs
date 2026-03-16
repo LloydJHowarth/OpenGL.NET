@@ -2,8 +2,11 @@ using System;
 
 namespace Engine.OpenGL
 {
-	public enum TextureStorageMaskAMD : uint
+	public static unsafe partial class GL
 	{
-		TextureStorageSparseBitAmd = 0x00000001,
+		public enum TextureStorageMaskAMD : uint
+		{
+			TextureStorageSparseBitAmd = 0x00000001,
+		}
 	}
 }

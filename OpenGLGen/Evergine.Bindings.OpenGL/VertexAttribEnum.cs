@@ -2,9 +2,12 @@ using System;
 
 namespace Engine.OpenGL
 {
-	public enum VertexAttribEnum : uint
+	public static unsafe partial class GL
 	{
-		CurrentVertexAttrib = 0x8626,
-		VertexAttribArrayBufferBinding = 0x889F,
+		public enum VertexAttribEnum : uint
+		{
+			CurrentVertexAttrib = 0x8626,
+			VertexAttribArrayBufferBinding = 0x889F,
+		}
 	}
 }

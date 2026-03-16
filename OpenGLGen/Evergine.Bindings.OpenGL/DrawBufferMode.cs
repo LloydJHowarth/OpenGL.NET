@@ -2,9 +2,12 @@ using System;
 
 namespace Engine.OpenGL
 {
-	public enum DrawBufferMode : uint
+	public static unsafe partial class GL
 	{
-		None = 0,
-		NoneOes = 0,
+		public enum DrawBufferMode : uint
+		{
+			None = 0,
+			NoneOes = 0,
+		}
 	}
 }

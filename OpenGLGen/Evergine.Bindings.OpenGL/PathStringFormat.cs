@@ -2,9 +2,12 @@ using System;
 
 namespace Engine.OpenGL
 {
-	public enum PathStringFormat : uint
+	public static unsafe partial class GL
 	{
-		PathFormatSvgNv = 0x9070,
-		PathFormatPsNv = 0x9071,
+		public enum PathStringFormat : uint
+		{
+			PathFormatSvgNv = 0x9070,
+			PathFormatPsNv = 0x9071,
+		}
 	}
 }

@@ -2,9 +2,12 @@ using System;
 
 namespace Engine.OpenGL
 {
-	public enum ProgramParameterPName : uint
+	public static unsafe partial class GL
 	{
-		ProgramBinaryRetrievableHint = 0x8257,
-		ProgramSeparable = 0x8258,
+		public enum ProgramParameterPName : uint
+		{
+			ProgramBinaryRetrievableHint = 0x8257,
+			ProgramSeparable = 0x8258,
+		}
 	}
 }

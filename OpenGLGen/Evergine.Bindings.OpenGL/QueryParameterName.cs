@@ -2,8 +2,11 @@ using System;
 
 namespace Engine.OpenGL
 {
-	public enum QueryParameterName : uint
+	public static unsafe partial class GL
 	{
-		CurrentQuery = 0x8865,
+		public enum QueryParameterName : uint
+		{
+			CurrentQuery = 0x8865,
+		}
 	}
 }

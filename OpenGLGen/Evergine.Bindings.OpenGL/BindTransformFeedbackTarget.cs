@@ -2,8 +2,11 @@ using System;
 
 namespace Engine.OpenGL
 {
-	public enum BindTransformFeedbackTarget : uint
+	public static unsafe partial class GL
 	{
-		TransformFeedback = 0x8E22,
+		public enum BindTransformFeedbackTarget : uint
+		{
+			TransformFeedback = 0x8E22,
+		}
 	}
 }

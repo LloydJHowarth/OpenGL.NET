@@ -2,8 +2,11 @@ using System;
 
 namespace Engine.OpenGL
 {
-	public enum LightEnvModeSGIX : uint
+	public static unsafe partial class GL
 	{
-		Replace = 0x1E01,
+		public enum LightEnvModeSGIX : uint
+		{
+			Replace = 0x1E01,
+		}
 	}
 }

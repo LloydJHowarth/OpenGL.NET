@@ -2,10 +2,13 @@ using System;
 
 namespace Engine.OpenGL
 {
-	public enum CullFaceMode : uint
+	public static unsafe partial class GL
 	{
-		Back = 0x0405,
-		Front = 0x0404,
-		FrontAndBack = 0x0408,
+		public enum CullFaceMode : uint
+		{
+			Back = 0x0405,
+			Front = 0x0404,
+			FrontAndBack = 0x0408,
+		}
 	}
 }

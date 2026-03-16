@@ -2,8 +2,11 @@ using System;
 
 namespace Engine.OpenGL
 {
-	public enum MinmaxTargetEXT : uint
+	public static unsafe partial class GL
 	{
-		Minmax = 0x802E,
+		public enum MinmaxTargetEXT : uint
+		{
+			Minmax = 0x802E,
+		}
 	}
 }

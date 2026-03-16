@@ -2,10 +2,13 @@ using System;
 
 namespace Engine.OpenGL
 {
-	public enum PathFillMode : uint
+	public static unsafe partial class GL
 	{
-		PathFillModeNv = 0x9080,
-		CountUpNv = 0x9088,
-		CountDownNv = 0x9089,
+		public enum PathFillMode : uint
+		{
+			PathFillModeNv = 0x9080,
+			CountUpNv = 0x9088,
+			CountDownNv = 0x9089,
+		}
 	}
 }

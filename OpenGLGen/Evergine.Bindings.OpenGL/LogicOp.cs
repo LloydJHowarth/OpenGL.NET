@@ -2,8 +2,11 @@ using System;
 
 namespace Engine.OpenGL
 {
-	public enum LogicOp : uint
+	public static unsafe partial class GL
 	{
-		Invert = 0x150A,
+		public enum LogicOp : uint
+		{
+			Invert = 0x150A,
+		}
 	}
 }

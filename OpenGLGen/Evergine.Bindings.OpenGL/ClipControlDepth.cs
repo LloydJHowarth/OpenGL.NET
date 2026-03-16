@@ -2,9 +2,12 @@ using System;
 
 namespace Engine.OpenGL
 {
-	public enum ClipControlDepth : uint
+	public static unsafe partial class GL
 	{
-		NegativeOneToOne = 0x935E,
-		ZeroToOne = 0x935F,
+		public enum ClipControlDepth : uint
+		{
+			NegativeOneToOne = 0x935E,
+			ZeroToOne = 0x935F,
+		}
 	}
 }

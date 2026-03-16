@@ -2,11 +2,14 @@ using System;
 
 namespace Engine.OpenGL
 {
-	public enum TypeEnum : uint
+	public static unsafe partial class GL
 	{
-		QueryWait = 0x8E13,
-		QueryNoWait = 0x8E14,
-		QueryByRegionWait = 0x8E15,
-		QueryByRegionNoWait = 0x8E16,
+		public enum TypeEnum : uint
+		{
+			QueryWait = 0x8E13,
+			QueryNoWait = 0x8E14,
+			QueryByRegionWait = 0x8E15,
+			QueryByRegionNoWait = 0x8E16,
+		}
 	}
 }

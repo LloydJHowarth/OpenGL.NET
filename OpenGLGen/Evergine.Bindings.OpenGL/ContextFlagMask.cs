@@ -2,12 +2,15 @@ using System;
 
 namespace Engine.OpenGL
 {
-	public enum ContextFlagMask : uint
+	public static unsafe partial class GL
 	{
-		ContextFlagRobustAccessBitArb = 0x00000004,
-		ContextFlagProtectedContentBitExt = 0x00000010,
-		ContextFlagDebugBit = 0x00000002,
-		ContextFlagDebugBitKhr = 0x00000002,
-		ContextFlagNoErrorBitKhr = 0x00000008,
+		public enum ContextFlagMask : uint
+		{
+			ContextFlagRobustAccessBitArb = 0x00000004,
+			ContextFlagProtectedContentBitExt = 0x00000010,
+			ContextFlagDebugBit = 0x00000002,
+			ContextFlagDebugBitKhr = 0x00000002,
+			ContextFlagNoErrorBitKhr = 0x00000008,
+		}
 	}
 }

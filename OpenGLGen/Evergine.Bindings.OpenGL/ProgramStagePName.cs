@@ -2,12 +2,15 @@ using System;
 
 namespace Engine.OpenGL
 {
-	public enum ProgramStagePName : uint
+	public static unsafe partial class GL
 	{
-		ActiveSubroutines = 0x8DE5,
-		ActiveSubroutineUniforms = 0x8DE6,
-		ActiveSubroutineUniformLocations = 0x8E47,
-		ActiveSubroutineMaxLength = 0x8E48,
-		ActiveSubroutineUniformMaxLength = 0x8E49,
+		public enum ProgramStagePName : uint
+		{
+			ActiveSubroutines = 0x8DE5,
+			ActiveSubroutineUniforms = 0x8DE6,
+			ActiveSubroutineUniformLocations = 0x8E47,
+			ActiveSubroutineMaxLength = 0x8E48,
+			ActiveSubroutineUniformMaxLength = 0x8E49,
+		}
 	}
 }

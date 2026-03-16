@@ -2,8 +2,11 @@ using System;
 
 namespace Engine.OpenGL
 {
-	public enum SemaphoreParameterName : uint
+	public static unsafe partial class GL
 	{
-		D3d12FenceValueExt = 0x9595,
+		public enum SemaphoreParameterName : uint
+		{
+			D3d12FenceValueExt = 0x9595,
+		}
 	}
 }

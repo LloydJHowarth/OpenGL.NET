@@ -2,8 +2,11 @@ using System;
 
 namespace Engine.OpenGL
 {
-	public enum SyncCondition : uint
+	public static unsafe partial class GL
 	{
-		SyncGpuCommandsComplete = 0x9117,
+		public enum SyncCondition : uint
+		{
+			SyncGpuCommandsComplete = 0x9117,
+		}
 	}
 }

@@ -2,9 +2,12 @@ using System;
 
 namespace Engine.OpenGL
 {
-	public enum PixelTexGenParameterNameSGIS : uint
+	public static unsafe partial class GL
 	{
-		PixelFragmentRgbSourceSgis = 0x8354,
-		PixelFragmentAlphaSourceSgis = 0x8355,
+		public enum PixelTexGenParameterNameSGIS : uint
+		{
+			PixelFragmentRgbSourceSgis = 0x8354,
+			PixelFragmentAlphaSourceSgis = 0x8355,
+		}
 	}
 }

@@ -2,8 +2,11 @@ using System;
 
 namespace Engine.OpenGL
 {
-	public enum FogParameter : uint
+	public static unsafe partial class GL
 	{
-		FogOffsetValueSgix = 0x8199,
+		public enum FogParameter : uint
+		{
+			FogOffsetValueSgix = 0x8199,
+		}
 	}
 }

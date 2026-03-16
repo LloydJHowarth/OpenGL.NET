@@ -2,9 +2,12 @@ using System;
 
 namespace Engine.OpenGL
 {
-	public enum FogMode : uint
+	public static unsafe partial class GL
 	{
-		Linear = 0x2601,
-		FogFuncSgis = 0x812A,
+		public enum FogMode : uint
+		{
+			Linear = 0x2601,
+			FogFuncSgis = 0x812A,
+		}
 	}
 }

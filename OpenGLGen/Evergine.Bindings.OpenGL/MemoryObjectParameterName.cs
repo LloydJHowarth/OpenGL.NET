@@ -2,9 +2,12 @@ using System;
 
 namespace Engine.OpenGL
 {
-	public enum MemoryObjectParameterName : uint
+	public static unsafe partial class GL
 	{
-		DedicatedMemoryObjectExt = 0x9581,
-		ProtectedMemoryObjectExt = 0x959B,
+		public enum MemoryObjectParameterName : uint
+		{
+			DedicatedMemoryObjectExt = 0x9581,
+			ProtectedMemoryObjectExt = 0x959B,
+		}
 	}
 }

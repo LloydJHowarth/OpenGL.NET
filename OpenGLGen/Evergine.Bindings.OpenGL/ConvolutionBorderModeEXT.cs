@@ -2,9 +2,12 @@ using System;
 
 namespace Engine.OpenGL
 {
-	public enum ConvolutionBorderModeEXT : uint
+	public static unsafe partial class GL
 	{
-		Reduce = 0x8016,
-		ReduceExt = 0x8016,
+		public enum ConvolutionBorderModeEXT : uint
+		{
+			Reduce = 0x8016,
+			ReduceExt = 0x8016,
+		}
 	}
 }

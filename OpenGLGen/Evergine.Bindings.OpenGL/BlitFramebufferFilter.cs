@@ -2,9 +2,12 @@ using System;
 
 namespace Engine.OpenGL
 {
-	public enum BlitFramebufferFilter : uint
+	public static unsafe partial class GL
 	{
-		Nearest = 0x2600,
-		Linear = 0x2601,
+		public enum BlitFramebufferFilter : uint
+		{
+			Nearest = 0x2600,
+			Linear = 0x2601,
+		}
 	}
 }

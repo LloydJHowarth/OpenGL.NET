@@ -2,8 +2,11 @@ using System;
 
 namespace Engine.OpenGL
 {
-	public enum VertexAttribType : uint
+	public static unsafe partial class GL
 	{
-		Fixed = 0x140C,
+		public enum VertexAttribType : uint
+		{
+			Fixed = 0x140C,
+		}
 	}
 }

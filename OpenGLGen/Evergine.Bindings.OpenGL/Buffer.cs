@@ -2,10 +2,13 @@ using System;
 
 namespace Engine.OpenGL
 {
-	public enum Buffer : uint
+	public static unsafe partial class GL
 	{
-		Color = 0x1800,
-		Depth = 0x1801,
-		Stencil = 0x1802,
+		public enum Buffer : uint
+		{
+			Color = 0x1800,
+			Depth = 0x1801,
+			Stencil = 0x1802,
+		}
 	}
 }

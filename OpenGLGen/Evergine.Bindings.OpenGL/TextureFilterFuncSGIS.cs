@@ -2,8 +2,11 @@ using System;
 
 namespace Engine.OpenGL
 {
-	public enum TextureFilterFuncSGIS : uint
+	public static unsafe partial class GL
 	{
-		Filter4Sgis = 0x8146,
+		public enum TextureFilterFuncSGIS : uint
+		{
+			Filter4Sgis = 0x8146,
+		}
 	}
 }

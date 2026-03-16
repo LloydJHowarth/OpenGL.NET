@@ -2,8 +2,11 @@ using System;
 
 namespace Engine.OpenGL
 {
-	public enum ListParameterName : uint
+	public static unsafe partial class GL
 	{
-		ListPrioritySgix = 0x8182,
+		public enum ListParameterName : uint
+		{
+			ListPrioritySgix = 0x8182,
+		}
 	}
 }

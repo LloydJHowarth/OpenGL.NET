@@ -2,9 +2,12 @@ using System;
 
 namespace Engine.OpenGL
 {
-	public enum PathFontStyle : uint
+	public static unsafe partial class GL
 	{
-		BoldBitNv = 0x01,
-		ItalicBitNv = 0x02,
+		public enum PathFontStyle : uint
+		{
+			BoldBitNv = 0x01,
+			ItalicBitNv = 0x02,
+		}
 	}
 }

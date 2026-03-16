@@ -2,9 +2,12 @@ using System;
 
 namespace Engine.OpenGL
 {
-	public enum VertexProvokingMode : uint
+	public static unsafe partial class GL
 	{
-		FirstVertexConvention = 0x8E4D,
-		LastVertexConvention = 0x8E4E,
+		public enum VertexProvokingMode : uint
+		{
+			FirstVertexConvention = 0x8E4D,
+			LastVertexConvention = 0x8E4E,
+		}
 	}
 }

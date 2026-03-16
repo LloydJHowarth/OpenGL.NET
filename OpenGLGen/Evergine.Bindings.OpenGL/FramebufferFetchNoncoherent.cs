@@ -2,8 +2,11 @@ using System;
 
 namespace Engine.OpenGL
 {
-	public enum FramebufferFetchNoncoherent : uint
+	public static unsafe partial class GL
 	{
-		FramebufferFetchNoncoherentQcom = 0x96A2,
+		public enum FramebufferFetchNoncoherent : uint
+		{
+			FramebufferFetchNoncoherentQcom = 0x96A2,
+		}
 	}
 }

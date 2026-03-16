@@ -2,10 +2,13 @@ using System;
 
 namespace Engine.OpenGL
 {
-	public enum StencilFaceDirection : uint
+	public static unsafe partial class GL
 	{
-		Front = 0x0404,
-		Back = 0x0405,
-		FrontAndBack = 0x0408,
+		public enum StencilFaceDirection : uint
+		{
+			Front = 0x0404,
+			Back = 0x0405,
+			FrontAndBack = 0x0408,
+		}
 	}
 }

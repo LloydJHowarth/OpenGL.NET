@@ -2,8 +2,11 @@ using System;
 
 namespace Engine.OpenGL
 {
-	public enum ClearBufferMask : uint
+	public static unsafe partial class GL
 	{
-		CoverageBufferBitNv = 0x00008000,
+		public enum ClearBufferMask : uint
+		{
+			CoverageBufferBitNv = 0x00008000,
+		}
 	}
 }

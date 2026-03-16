@@ -2,9 +2,12 @@ using System;
 
 namespace Engine.OpenGL
 {
-	public enum PathHandleMissingGlyphs : uint
+	public static unsafe partial class GL
 	{
-		SkipMissingGlyphNv = 0x90A9,
-		UseMissingGlyphNv = 0x90AA,
+		public enum PathHandleMissingGlyphs : uint
+		{
+			SkipMissingGlyphNv = 0x90A9,
+			UseMissingGlyphNv = 0x90AA,
+		}
 	}
 }

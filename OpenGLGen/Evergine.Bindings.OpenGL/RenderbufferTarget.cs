@@ -2,8 +2,11 @@ using System;
 
 namespace Engine.OpenGL
 {
-	public enum RenderbufferTarget : uint
+	public static unsafe partial class GL
 	{
-		Renderbuffer = 0x8D41,
+		public enum RenderbufferTarget : uint
+		{
+			Renderbuffer = 0x8D41,
+		}
 	}
 }
