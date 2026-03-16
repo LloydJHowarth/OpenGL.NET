@@ -1,7 +1,10 @@
-namespace Engine.OpenGL;
+using System;
 
-public enum PathElementType : uint
+namespace Engine.OpenGL
 {
-	Utf8Nv = 0x909A,
-	Utf16Nv = 0x909B,
+	public enum PathElementType : uint
+	{
+		Utf8Nv = 0x909A,
+		Utf16Nv = 0x909B,
+	}
 }

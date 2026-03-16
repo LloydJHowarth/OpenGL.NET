@@ -1,7 +1,10 @@
-namespace Engine.OpenGL;
+using System;
 
-public enum ClipControlDepth : uint
+namespace Engine.OpenGL
 {
-	NegativeOneToOne = 0x935E,
-	ZeroToOne = 0x935F,
+	public enum ClipControlDepth : uint
+	{
+		NegativeOneToOne = 0x935E,
+		ZeroToOne = 0x935F,
+	}
 }

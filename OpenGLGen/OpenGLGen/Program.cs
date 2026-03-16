@@ -35,20 +35,24 @@ namespace OpenGLGen
                 using (var writer = new StreamWriter(filePath))
                 {
                     // Optionally use modern C# namespace style
-                    writer.WriteLine($"{namespaceText};\n");
+                    writer.WriteLine("using System;");
+                    writer.WriteLine("");
+                    writer.WriteLine(namespaceText);
+                    writer.WriteLine("{");
 
                     // Write enum
-                    writer.WriteLine($"public enum {groupElem.Name} : uint");
-                    writer.WriteLine("{");
+                    writer.WriteLine($"\tpublic enum {groupElem.Name} : uint");
+                    writer.WriteLine("\t{");
 
                     foreach (var enumElem in groupElem.Enums)
                     {
                         if (IsUint(enumElem.Value))
                         {
-                            writer.WriteLine($"\t{enumElem.ShortName} = {enumElem.Value},");
+                            writer.WriteLine($"\t\t{enumElem.ShortName} = {enumElem.Value},");
                         }
                     }
 
+                    writer.WriteLine("\t}");
                     writer.WriteLine("}");
                 }
             }

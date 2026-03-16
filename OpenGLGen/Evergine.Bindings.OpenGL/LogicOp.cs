@@ -1,6 +1,9 @@
-namespace Engine.OpenGL;
+using System;
 
-public enum LogicOp : uint
+namespace Engine.OpenGL
 {
-	Invert = 0x150A,
+	public enum LogicOp : uint
+	{
+		Invert = 0x150A,
+	}
 }

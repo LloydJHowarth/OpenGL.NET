@@ -1,10 +1,13 @@
-namespace Engine.OpenGL;
+using System;
 
-public enum TextureGenParameter : uint
+namespace Engine.OpenGL
 {
-	EyePlane = 0x2502,
-	EyePointSgis = 0x81F4,
-	ObjectPointSgis = 0x81F5,
-	EyeLineSgis = 0x81F6,
-	ObjectLineSgis = 0x81F7,
+	public enum TextureGenParameter : uint
+	{
+		EyePlane = 0x2502,
+		EyePointSgis = 0x81F4,
+		ObjectPointSgis = 0x81F5,
+		EyeLineSgis = 0x81F6,
+		ObjectLineSgis = 0x81F7,
+	}
 }

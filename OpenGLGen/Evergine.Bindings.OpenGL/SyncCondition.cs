@@ -1,6 +1,9 @@
-namespace Engine.OpenGL;
+using System;
 
-public enum SyncCondition : uint
+namespace Engine.OpenGL
 {
-	SyncGpuCommandsComplete = 0x9117,
+	public enum SyncCondition : uint
+	{
+		SyncGpuCommandsComplete = 0x9117,
+	}
 }

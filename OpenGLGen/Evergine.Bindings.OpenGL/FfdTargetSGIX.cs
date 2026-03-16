@@ -1,7 +1,10 @@
-namespace Engine.OpenGL;
+using System;
 
-public enum FfdTargetSGIX : uint
+namespace Engine.OpenGL
 {
-	GeometryDeformationSgix = 0x8194,
-	TextureDeformationSgix = 0x8195,
+	public enum FfdTargetSGIX : uint
+	{
+		GeometryDeformationSgix = 0x8194,
+		TextureDeformationSgix = 0x8195,
+	}
 }

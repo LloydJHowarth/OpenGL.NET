@@ -1,9 +1,12 @@
-namespace Engine.OpenGL;
+using System;
 
-public enum SyncStatus : uint
+namespace Engine.OpenGL
 {
-	AlreadySignaled = 0x911A,
-	TimeoutExpired = 0x911B,
-	ConditionSatisfied = 0x911C,
-	WaitFailed = 0x911D,
+	public enum SyncStatus : uint
+	{
+		AlreadySignaled = 0x911A,
+		TimeoutExpired = 0x911B,
+		ConditionSatisfied = 0x911C,
+		WaitFailed = 0x911D,
+	}
 }

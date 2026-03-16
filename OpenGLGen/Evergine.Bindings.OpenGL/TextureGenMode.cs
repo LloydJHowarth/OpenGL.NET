@@ -1,9 +1,12 @@
-namespace Engine.OpenGL;
+using System;
 
-public enum TextureGenMode : uint
+namespace Engine.OpenGL
 {
-	EyeDistanceToPointSgis = 0x81F0,
-	ObjectDistanceToPointSgis = 0x81F1,
-	EyeDistanceToLineSgis = 0x81F2,
-	ObjectDistanceToLineSgis = 0x81F3,
+	public enum TextureGenMode : uint
+	{
+		EyeDistanceToPointSgis = 0x81F0,
+		ObjectDistanceToPointSgis = 0x81F1,
+		EyeDistanceToLineSgis = 0x81F2,
+		ObjectDistanceToLineSgis = 0x81F3,
+	}
 }

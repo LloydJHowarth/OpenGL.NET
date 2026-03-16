@@ -1,7 +1,10 @@
-namespace Engine.OpenGL;
+using System;
 
-public enum VertexAttribEnum : uint
+namespace Engine.OpenGL
 {
-	CurrentVertexAttrib = 0x8626,
-	VertexAttribArrayBufferBinding = 0x889F,
+	public enum VertexAttribEnum : uint
+	{
+		CurrentVertexAttrib = 0x8626,
+		VertexAttribArrayBufferBinding = 0x889F,
+	}
 }

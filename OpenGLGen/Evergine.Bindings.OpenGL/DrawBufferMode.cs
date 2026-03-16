@@ -1,7 +1,10 @@
-namespace Engine.OpenGL;
+using System;
 
-public enum DrawBufferMode : uint
+namespace Engine.OpenGL
 {
-	None = 0,
-	NoneOes = 0,
+	public enum DrawBufferMode : uint
+	{
+		None = 0,
+		NoneOes = 0,
+	}
 }

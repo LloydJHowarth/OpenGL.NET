@@ -1,9 +1,12 @@
-namespace Engine.OpenGL;
+using System;
 
-public enum QueryObjectParameterName : uint
+namespace Engine.OpenGL
 {
-	QueryResult = 0x8866,
-	QueryResultAvailable = 0x8867,
-	QueryTarget = 0x82EA,
-	QueryResultNoWait = 0x9194,
+	public enum QueryObjectParameterName : uint
+	{
+		QueryResult = 0x8866,
+		QueryResultAvailable = 0x8867,
+		QueryTarget = 0x82EA,
+		QueryResultNoWait = 0x9194,
+	}
 }

@@ -1,6 +1,9 @@
-namespace Engine.OpenGL;
+using System;
 
-public enum SemaphoreParameterName : uint
+namespace Engine.OpenGL
 {
-	D3d12FenceValueExt = 0x9595,
+	public enum SemaphoreParameterName : uint
+	{
+		D3d12FenceValueExt = 0x9595,
+	}
 }

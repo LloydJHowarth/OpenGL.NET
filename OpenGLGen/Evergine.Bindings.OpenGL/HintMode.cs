@@ -1,8 +1,11 @@
-namespace Engine.OpenGL;
+using System;
 
-public enum HintMode : uint
+namespace Engine.OpenGL
 {
-	DontCare = 0x1100,
-	Fastest = 0x1101,
-	Nicest = 0x1102,
+	public enum HintMode : uint
+	{
+		DontCare = 0x1100,
+		Fastest = 0x1101,
+		Nicest = 0x1102,
+	}
 }

@@ -1,6 +1,9 @@
-namespace Engine.OpenGL;
+using System;
 
-public enum ListParameterName : uint
+namespace Engine.OpenGL
 {
-	ListPrioritySgix = 0x8182,
+	public enum ListParameterName : uint
+	{
+		ListPrioritySgix = 0x8182,
+	}
 }

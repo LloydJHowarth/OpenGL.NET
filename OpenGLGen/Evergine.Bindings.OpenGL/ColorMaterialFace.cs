@@ -1,8 +1,11 @@
-namespace Engine.OpenGL;
+using System;
 
-public enum ColorMaterialFace : uint
+namespace Engine.OpenGL
 {
-	Front = 0x0404,
-	Back = 0x0405,
-	FrontAndBack = 0x0408,
+	public enum ColorMaterialFace : uint
+	{
+		Front = 0x0404,
+		Back = 0x0405,
+		FrontAndBack = 0x0408,
+	}
 }

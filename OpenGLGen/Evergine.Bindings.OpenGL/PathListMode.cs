@@ -1,8 +1,11 @@
-namespace Engine.OpenGL;
+using System;
 
-public enum PathListMode : uint
+namespace Engine.OpenGL
 {
-	AccumAdjacentPairsNv = 0x90AD,
-	AdjacentPairsNv = 0x90AE,
-	FirstToRestNv = 0x90AF,
+	public enum PathListMode : uint
+	{
+		AccumAdjacentPairsNv = 0x90AD,
+		AdjacentPairsNv = 0x90AE,
+		FirstToRestNv = 0x90AF,
+	}
 }

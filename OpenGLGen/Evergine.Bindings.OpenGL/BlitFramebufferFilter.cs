@@ -1,7 +1,10 @@
-namespace Engine.OpenGL;
+using System;
 
-public enum BlitFramebufferFilter : uint
+namespace Engine.OpenGL
 {
-	Nearest = 0x2600,
-	Linear = 0x2601,
+	public enum BlitFramebufferFilter : uint
+	{
+		Nearest = 0x2600,
+		Linear = 0x2601,
+	}
 }

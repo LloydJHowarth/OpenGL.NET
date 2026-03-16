@@ -1,9 +1,12 @@
-namespace Engine.OpenGL;
+using System;
 
-public enum GetMinmaxParameterPNameEXT : uint
+namespace Engine.OpenGL
 {
-	MinmaxFormat = 0x802F,
-	MinmaxSink = 0x8030,
-	MinmaxFormatExt = 0x802F,
-	MinmaxSinkExt = 0x8030,
+	public enum GetMinmaxParameterPNameEXT : uint
+	{
+		MinmaxFormat = 0x802F,
+		MinmaxSink = 0x8030,
+		MinmaxFormatExt = 0x802F,
+		MinmaxSinkExt = 0x8030,
+	}
 }

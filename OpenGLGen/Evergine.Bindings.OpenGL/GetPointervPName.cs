@@ -1,14 +1,17 @@
-namespace Engine.OpenGL;
+using System;
 
-public enum GetPointervPName : uint
+namespace Engine.OpenGL
 {
-	VertexArrayPointerExt = 0x808E,
-	NormalArrayPointerExt = 0x808F,
-	ColorArrayPointerExt = 0x8090,
-	IndexArrayPointerExt = 0x8091,
-	TextureCoordArrayPointerExt = 0x8092,
-	EdgeFlagArrayPointerExt = 0x8093,
-	DebugCallbackFunction = 0x8244,
-	DebugCallbackUserParam = 0x8245,
-	InstrumentBufferPointerSgix = 0x8180,
+	public enum GetPointervPName : uint
+	{
+		VertexArrayPointerExt = 0x808E,
+		NormalArrayPointerExt = 0x808F,
+		ColorArrayPointerExt = 0x8090,
+		IndexArrayPointerExt = 0x8091,
+		TextureCoordArrayPointerExt = 0x8092,
+		EdgeFlagArrayPointerExt = 0x8093,
+		DebugCallbackFunction = 0x8244,
+		DebugCallbackUserParam = 0x8245,
+		InstrumentBufferPointerSgix = 0x8180,
+	}
 }

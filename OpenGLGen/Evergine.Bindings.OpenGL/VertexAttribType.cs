@@ -1,6 +1,9 @@
-namespace Engine.OpenGL;
+using System;
 
-public enum VertexAttribType : uint
+namespace Engine.OpenGL
 {
-	Fixed = 0x140C,
+	public enum VertexAttribType : uint
+	{
+		Fixed = 0x140C,
+	}
 }

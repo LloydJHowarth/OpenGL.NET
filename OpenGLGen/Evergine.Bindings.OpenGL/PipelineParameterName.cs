@@ -1,6 +1,9 @@
-namespace Engine.OpenGL;
+using System;
 
-public enum PipelineParameterName : uint
+namespace Engine.OpenGL
 {
-	ActiveProgram = 0x8259,
+	public enum PipelineParameterName : uint
+	{
+		ActiveProgram = 0x8259,
+	}
 }

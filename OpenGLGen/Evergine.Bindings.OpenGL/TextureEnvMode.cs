@@ -1,7 +1,10 @@
-namespace Engine.OpenGL;
+using System;
 
-public enum TextureEnvMode : uint
+namespace Engine.OpenGL
 {
-	ReplaceExt = 0x8062,
-	TextureEnvBiasSgix = 0x80BE,
+	public enum TextureEnvMode : uint
+	{
+		ReplaceExt = 0x8062,
+		TextureEnvBiasSgix = 0x80BE,
+	}
 }

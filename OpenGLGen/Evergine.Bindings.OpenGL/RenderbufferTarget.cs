@@ -1,6 +1,9 @@
-namespace Engine.OpenGL;
+using System;
 
-public enum RenderbufferTarget : uint
+namespace Engine.OpenGL
 {
-	Renderbuffer = 0x8D41,
+	public enum RenderbufferTarget : uint
+	{
+		Renderbuffer = 0x8D41,
+	}
 }

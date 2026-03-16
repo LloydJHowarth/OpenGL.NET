@@ -1,7 +1,10 @@
-namespace Engine.OpenGL;
+using System;
 
-public enum TransformFeedbackPName : uint
+namespace Engine.OpenGL
 {
-	TransformFeedbackPaused = 0x8E23,
-	TransformFeedbackActive = 0x8E24,
+	public enum TransformFeedbackPName : uint
+	{
+		TransformFeedbackPaused = 0x8E23,
+		TransformFeedbackActive = 0x8E24,
+	}
 }

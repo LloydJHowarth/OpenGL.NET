@@ -1,7 +1,10 @@
-namespace Engine.OpenGL;
+using System;
 
-public enum PathHandleMissingGlyphs : uint
+namespace Engine.OpenGL
 {
-	SkipMissingGlyphNv = 0x90A9,
-	UseMissingGlyphNv = 0x90AA,
+	public enum PathHandleMissingGlyphs : uint
+	{
+		SkipMissingGlyphNv = 0x90A9,
+		UseMissingGlyphNv = 0x90AA,
+	}
 }

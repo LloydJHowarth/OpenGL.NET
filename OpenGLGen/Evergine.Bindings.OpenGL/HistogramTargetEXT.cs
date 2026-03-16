@@ -1,8 +1,11 @@
-namespace Engine.OpenGL;
+using System;
 
-public enum HistogramTargetEXT : uint
+namespace Engine.OpenGL
 {
-	Histogram = 0x8024,
-	ProxyHistogram = 0x8025,
-	ProxyHistogramExt = 0x8025,
+	public enum HistogramTargetEXT : uint
+	{
+		Histogram = 0x8024,
+		ProxyHistogram = 0x8025,
+		ProxyHistogramExt = 0x8025,
+	}
 }

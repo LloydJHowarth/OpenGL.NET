@@ -1,6 +1,9 @@
-namespace Engine.OpenGL;
+using System;
 
-public enum LightModelParameter : uint
+namespace Engine.OpenGL
 {
-	LightModelColorControlExt = 0x81F8,
+	public enum LightModelParameter : uint
+	{
+		LightModelColorControlExt = 0x81F8,
+	}
 }

@@ -1,7 +1,10 @@
-namespace Engine.OpenGL;
+using System;
 
-public enum MatrixMode : uint
+namespace Engine.OpenGL
 {
-	Texture = 0x1702,
-	Modelview0Ext = 0x1700,
+	public enum MatrixMode : uint
+	{
+		Texture = 0x1702,
+		Modelview0Ext = 0x1700,
+	}
 }

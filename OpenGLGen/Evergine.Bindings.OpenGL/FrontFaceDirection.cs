@@ -1,7 +1,10 @@
-namespace Engine.OpenGL;
+using System;
 
-public enum FrontFaceDirection : uint
+namespace Engine.OpenGL
 {
-	Cw = 0x0900,
-	Ccw = 0x0901,
+	public enum FrontFaceDirection : uint
+	{
+		Cw = 0x0900,
+		Ccw = 0x0901,
+	}
 }

@@ -1,7 +1,10 @@
-namespace Engine.OpenGL;
+using System;
 
-public enum VertexProvokingMode : uint
+namespace Engine.OpenGL
 {
-	FirstVertexConvention = 0x8E4D,
-	LastVertexConvention = 0x8E4E,
+	public enum VertexProvokingMode : uint
+	{
+		FirstVertexConvention = 0x8E4D,
+		LastVertexConvention = 0x8E4E,
+	}
 }

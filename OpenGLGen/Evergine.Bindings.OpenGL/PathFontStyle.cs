@@ -1,7 +1,10 @@
-namespace Engine.OpenGL;
+using System;
 
-public enum PathFontStyle : uint
+namespace Engine.OpenGL
 {
-	BoldBitNv = 0x01,
-	ItalicBitNv = 0x02,
+	public enum PathFontStyle : uint
+	{
+		BoldBitNv = 0x01,
+		ItalicBitNv = 0x02,
+	}
 }

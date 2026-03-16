@@ -1,6 +1,9 @@
-namespace Engine.OpenGL;
+using System;
 
-public enum FramebufferFetchNoncoherent : uint
+namespace Engine.OpenGL
 {
-	FramebufferFetchNoncoherentQcom = 0x96A2,
+	public enum FramebufferFetchNoncoherent : uint
+	{
+		FramebufferFetchNoncoherentQcom = 0x96A2,
+	}
 }

@@ -1,6 +1,9 @@
-namespace Engine.OpenGL;
+using System;
 
-public enum SeparableTargetEXT : uint
+namespace Engine.OpenGL
 {
-	Separable2d = 0x8012,
+	public enum SeparableTargetEXT : uint
+	{
+		Separable2d = 0x8012,
+	}
 }

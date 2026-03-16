@@ -1,6 +1,9 @@
-namespace Engine.OpenGL;
+using System;
 
-public enum LightEnvModeSGIX : uint
+namespace Engine.OpenGL
 {
-	Replace = 0x1E01,
+	public enum LightEnvModeSGIX : uint
+	{
+		Replace = 0x1E01,
+	}
 }

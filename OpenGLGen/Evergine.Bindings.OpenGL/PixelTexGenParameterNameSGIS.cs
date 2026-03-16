@@ -1,7 +1,10 @@
-namespace Engine.OpenGL;
+using System;
 
-public enum PixelTexGenParameterNameSGIS : uint
+namespace Engine.OpenGL
 {
-	PixelFragmentRgbSourceSgis = 0x8354,
-	PixelFragmentAlphaSourceSgis = 0x8355,
+	public enum PixelTexGenParameterNameSGIS : uint
+	{
+		PixelFragmentRgbSourceSgis = 0x8354,
+		PixelFragmentAlphaSourceSgis = 0x8355,
+	}
 }

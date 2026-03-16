@@ -1,7 +1,10 @@
-namespace Engine.OpenGL;
+using System;
 
-public enum SubroutineParameterName : uint
+namespace Engine.OpenGL
 {
-	NumCompatibleSubroutines = 0x8E4A,
-	CompatibleSubroutines = 0x8E4B,
+	public enum SubroutineParameterName : uint
+	{
+		NumCompatibleSubroutines = 0x8E4A,
+		CompatibleSubroutines = 0x8E4B,
+	}
 }

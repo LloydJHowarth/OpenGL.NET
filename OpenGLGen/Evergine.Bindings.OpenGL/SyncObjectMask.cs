@@ -1,7 +1,10 @@
-namespace Engine.OpenGL;
+using System;
 
-public enum SyncObjectMask : uint
+namespace Engine.OpenGL
 {
-	SyncFlushCommandsBit = 0x00000001,
-	SyncFlushCommandsBitApple = 0x00000001,
+	public enum SyncObjectMask : uint
+	{
+		SyncFlushCommandsBit = 0x00000001,
+		SyncFlushCommandsBitApple = 0x00000001,
+	}
 }

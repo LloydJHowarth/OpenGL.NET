@@ -1,7 +1,10 @@
-namespace Engine.OpenGL;
+using System;
 
-public enum BufferAccessARB : uint
+namespace Engine.OpenGL
 {
-	ReadWrite = 0x88BA,
-	WriteOnly = 0x88B9,
+	public enum BufferAccessARB : uint
+	{
+		ReadWrite = 0x88BA,
+		WriteOnly = 0x88B9,
+	}
 }

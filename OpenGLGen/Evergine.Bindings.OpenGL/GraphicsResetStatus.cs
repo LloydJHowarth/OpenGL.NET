@@ -1,8 +1,11 @@
-namespace Engine.OpenGL;
+using System;
 
-public enum GraphicsResetStatus : uint
+namespace Engine.OpenGL
 {
-	GuiltyContextReset = 0x8253,
-	InnocentContextReset = 0x8254,
-	UnknownContextReset = 0x8255,
+	public enum GraphicsResetStatus : uint
+	{
+		GuiltyContextReset = 0x8253,
+		InnocentContextReset = 0x8254,
+		UnknownContextReset = 0x8255,
+	}
 }

@@ -1,8 +1,11 @@
-namespace Engine.OpenGL;
+using System;
 
-public enum PathFontTarget : uint
+namespace Engine.OpenGL
 {
-	StandardFontNameNv = 0x9072,
-	SystemFontNameNv = 0x9073,
-	FileNameNv = 0x9074,
+	public enum PathFontTarget : uint
+	{
+		StandardFontNameNv = 0x9072,
+		SystemFontNameNv = 0x9073,
+		FileNameNv = 0x9074,
+	}
 }

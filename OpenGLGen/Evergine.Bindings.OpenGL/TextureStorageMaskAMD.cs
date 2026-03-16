@@ -1,6 +1,9 @@
-namespace Engine.OpenGL;
+using System;
 
-public enum TextureStorageMaskAMD : uint
+namespace Engine.OpenGL
 {
-	TextureStorageSparseBitAmd = 0x00000001,
+	public enum TextureStorageMaskAMD : uint
+	{
+		TextureStorageSparseBitAmd = 0x00000001,
+	}
 }

@@ -1,7 +1,10 @@
-namespace Engine.OpenGL;
+using System;
 
-public enum ClipControlOrigin : uint
+namespace Engine.OpenGL
 {
-	LowerLeft = 0x8CA1,
-	UpperLeft = 0x8CA2,
+	public enum ClipControlOrigin : uint
+	{
+		LowerLeft = 0x8CA1,
+		UpperLeft = 0x8CA2,
+	}
 }

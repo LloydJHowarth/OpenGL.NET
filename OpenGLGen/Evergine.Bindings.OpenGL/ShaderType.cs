@@ -1,12 +1,15 @@
-namespace Engine.OpenGL;
+using System;
 
-public enum ShaderType : uint
+namespace Engine.OpenGL
 {
-	FragmentShader = 0x8B30,
-	VertexShader = 0x8B31,
-	ComputeShader = 0x91B9,
-	FragmentShaderArb = 0x8B30,
-	TessEvaluationShader = 0x8E87,
-	TessControlShader = 0x8E88,
-	VertexShaderArb = 0x8B31,
+	public enum ShaderType : uint
+	{
+		FragmentShader = 0x8B30,
+		VertexShader = 0x8B31,
+		ComputeShader = 0x91B9,
+		FragmentShaderArb = 0x8B30,
+		TessEvaluationShader = 0x8E87,
+		TessControlShader = 0x8E88,
+		VertexShaderArb = 0x8B31,
+	}
 }

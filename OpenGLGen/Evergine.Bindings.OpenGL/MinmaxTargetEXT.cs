@@ -1,6 +1,9 @@
-namespace Engine.OpenGL;
+using System;
 
-public enum MinmaxTargetEXT : uint
+namespace Engine.OpenGL
 {
-	Minmax = 0x802E,
+	public enum MinmaxTargetEXT : uint
+	{
+		Minmax = 0x802E,
+	}
 }

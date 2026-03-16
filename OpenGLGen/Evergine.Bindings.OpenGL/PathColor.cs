@@ -1,8 +1,11 @@
-namespace Engine.OpenGL;
+using System;
 
-public enum PathColor : uint
+namespace Engine.OpenGL
 {
-	PrimaryColor = 0x8577,
-	PrimaryColorNv = 0x852C,
-	SecondaryColorNv = 0x852D,
+	public enum PathColor : uint
+	{
+		PrimaryColor = 0x8577,
+		PrimaryColorNv = 0x852C,
+		SecondaryColorNv = 0x852D,
+	}
 }

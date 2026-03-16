@@ -1,8 +1,11 @@
-namespace Engine.OpenGL;
+using System;
 
-public enum MapTextureFormatINTEL : uint
+namespace Engine.OpenGL
 {
-	LayoutDefaultIntel = 0,
-	LayoutLinearIntel = 1,
-	LayoutLinearCpuCachedIntel = 2,
+	public enum MapTextureFormatINTEL : uint
+	{
+		LayoutDefaultIntel = 0,
+		LayoutLinearIntel = 1,
+		LayoutLinearCpuCachedIntel = 2,
+	}
 }

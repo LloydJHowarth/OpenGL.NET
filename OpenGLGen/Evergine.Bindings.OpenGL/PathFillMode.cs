@@ -1,8 +1,11 @@
-namespace Engine.OpenGL;
+using System;
 
-public enum PathFillMode : uint
+namespace Engine.OpenGL
 {
-	PathFillModeNv = 0x9080,
-	CountUpNv = 0x9088,
-	CountDownNv = 0x9089,
+	public enum PathFillMode : uint
+	{
+		PathFillModeNv = 0x9080,
+		CountUpNv = 0x9088,
+		CountDownNv = 0x9089,
+	}
 }

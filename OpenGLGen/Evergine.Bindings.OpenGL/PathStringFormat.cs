@@ -1,7 +1,10 @@
-namespace Engine.OpenGL;
+using System;
 
-public enum PathStringFormat : uint
+namespace Engine.OpenGL
 {
-	PathFormatSvgNv = 0x9070,
-	PathFormatPsNv = 0x9071,
+	public enum PathStringFormat : uint
+	{
+		PathFormatSvgNv = 0x9070,
+		PathFormatPsNv = 0x9071,
+	}
 }

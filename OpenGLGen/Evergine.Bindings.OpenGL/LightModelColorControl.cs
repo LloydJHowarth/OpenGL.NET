@@ -1,7 +1,10 @@
-namespace Engine.OpenGL;
+using System;
 
-public enum LightModelColorControl : uint
+namespace Engine.OpenGL
 {
-	SingleColorExt = 0x81F9,
-	SeparateSpecularColorExt = 0x81FA,
+	public enum LightModelColorControl : uint
+	{
+		SingleColorExt = 0x81F9,
+		SeparateSpecularColorExt = 0x81FA,
+	}
 }

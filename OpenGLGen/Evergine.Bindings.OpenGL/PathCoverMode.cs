@@ -1,8 +1,11 @@
-namespace Engine.OpenGL;
+using System;
 
-public enum PathCoverMode : uint
+namespace Engine.OpenGL
 {
-	ConvexHullNv = 0x908B,
-	BoundingBoxNv = 0x908D,
-	BoundingBoxOfBoundingBoxesNv = 0x909C,
+	public enum PathCoverMode : uint
+	{
+		ConvexHullNv = 0x908B,
+		BoundingBoxNv = 0x908D,
+		BoundingBoxOfBoundingBoxesNv = 0x909C,
+	}
 }

@@ -1,8 +1,11 @@
-namespace Engine.OpenGL;
+using System;
 
-public enum DrawElementsType : uint
+namespace Engine.OpenGL
 {
-	UnsignedByte = 0x1401,
-	UnsignedShort = 0x1403,
-	UnsignedInt = 0x1405,
+	public enum DrawElementsType : uint
+	{
+		UnsignedByte = 0x1401,
+		UnsignedShort = 0x1403,
+		UnsignedInt = 0x1405,
+	}
 }

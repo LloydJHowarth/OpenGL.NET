@@ -1,6 +1,9 @@
-namespace Engine.OpenGL;
+using System;
 
-public enum FogParameter : uint
+namespace Engine.OpenGL
 {
-	FogOffsetValueSgix = 0x8199,
+	public enum FogParameter : uint
+	{
+		FogOffsetValueSgix = 0x8199,
+	}
 }

@@ -1,9 +1,12 @@
-namespace Engine.OpenGL;
+using System;
 
-public enum TypeEnum : uint
+namespace Engine.OpenGL
 {
-	QueryWait = 0x8E13,
-	QueryNoWait = 0x8E14,
-	QueryByRegionWait = 0x8E15,
-	QueryByRegionNoWait = 0x8E16,
+	public enum TypeEnum : uint
+	{
+		QueryWait = 0x8E13,
+		QueryNoWait = 0x8E14,
+		QueryByRegionWait = 0x8E15,
+		QueryByRegionNoWait = 0x8E16,
+	}
 }

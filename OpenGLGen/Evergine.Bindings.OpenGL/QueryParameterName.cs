@@ -1,6 +1,9 @@
-namespace Engine.OpenGL;
+using System;
 
-public enum QueryParameterName : uint
+namespace Engine.OpenGL
 {
-	CurrentQuery = 0x8865,
+	public enum QueryParameterName : uint
+	{
+		CurrentQuery = 0x8865,
+	}
 }

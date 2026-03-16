@@ -1,6 +1,9 @@
-namespace Engine.OpenGL;
+using System;
 
-public enum ClearBufferMask : uint
+namespace Engine.OpenGL
 {
-	CoverageBufferBitNv = 0x00008000,
+	public enum ClearBufferMask : uint
+	{
+		CoverageBufferBitNv = 0x00008000,
+	}
 }

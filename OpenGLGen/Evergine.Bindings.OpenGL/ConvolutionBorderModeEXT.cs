@@ -1,7 +1,10 @@
-namespace Engine.OpenGL;
+using System;
 
-public enum ConvolutionBorderModeEXT : uint
+namespace Engine.OpenGL
 {
-	Reduce = 0x8016,
-	ReduceExt = 0x8016,
+	public enum ConvolutionBorderModeEXT : uint
+	{
+		Reduce = 0x8016,
+		ReduceExt = 0x8016,
+	}
 }

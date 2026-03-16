@@ -1,7 +1,10 @@
-namespace Engine.OpenGL;
+using System;
 
-public enum FogMode : uint
+namespace Engine.OpenGL
 {
-	Linear = 0x2601,
-	FogFuncSgis = 0x812A,
+	public enum FogMode : uint
+	{
+		Linear = 0x2601,
+		FogFuncSgis = 0x812A,
+	}
 }

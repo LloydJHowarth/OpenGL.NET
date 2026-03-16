@@ -1,7 +1,10 @@
-namespace Engine.OpenGL;
+using System;
 
-public enum ProgramParameterPName : uint
+namespace Engine.OpenGL
 {
-	ProgramBinaryRetrievableHint = 0x8257,
-	ProgramSeparable = 0x8258,
+	public enum ProgramParameterPName : uint
+	{
+		ProgramBinaryRetrievableHint = 0x8257,
+		ProgramSeparable = 0x8258,
+	}
 }

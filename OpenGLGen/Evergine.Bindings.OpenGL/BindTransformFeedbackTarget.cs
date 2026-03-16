@@ -1,6 +1,9 @@
-namespace Engine.OpenGL;
+using System;
 
-public enum BindTransformFeedbackTarget : uint
+namespace Engine.OpenGL
 {
-	TransformFeedback = 0x8E22,
+	public enum BindTransformFeedbackTarget : uint
+	{
+		TransformFeedback = 0x8E22,
+	}
 }
