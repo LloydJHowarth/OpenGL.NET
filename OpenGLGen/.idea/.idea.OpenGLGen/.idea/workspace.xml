@@ -17,9 +17,6 @@
   <component name="DpaMonitoringSettings">
     <option name="firstShow" value="false" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Evergine.Bindings.OpenGL/OPENGL.cs" root0="SKIP_HIGHLIGHTING" />
-  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 4
@@ -96,6 +93,7 @@
       <option name="presentableId" value="Default" />
       <updated>1773671840113</updated>
       <workItem from="1773671840721" duration="2681000" />
+      <workItem from="1773937064481" duration="288000" />
     </task>
     <servers />
   </component>
