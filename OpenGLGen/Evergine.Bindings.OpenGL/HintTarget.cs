@@ -1,0 +1,48 @@
+using System;
+
+namespace ENGINE.OPENGL
+{
+	public static unsafe partial class OpenGL
+	{
+		public enum HintTarget : uint
+		{
+			GenerateMipmapHint = 0x8192,
+			ProgramBinaryRetrievableHint = 0x8257,
+			TextureStorageHintApple = 0x85BC,
+			TransformHintApple = 0x85B1,
+			VertexArrayStorageHintApple = 0x851F,
+			FragmentShaderDerivativeHintArb = 0x8B8B,
+			TextureCompressionHintArb = 0x84EF,
+			ClipVolumeClippingHintExt = 0x80F0,
+			MultisampleFilterHintNv = 0x8534,
+			FragmentShaderDerivativeHintOes = 0x8B8B,
+			PreferDoublebufferHintPgi = 0x1A1F8,
+			ConserveMemoryHintPgi = 0x1A1FD,
+			ReclaimMemoryHintPgi = 0x1A1FE,
+			NativeGraphicsBeginHintPgi = 0x1A203,
+			NativeGraphicsEndHintPgi = 0x1A204,
+			AlwaysFastHintPgi = 0x1A20C,
+			AlwaysSoftHintPgi = 0x1A20D,
+			AllowDrawObjHintPgi = 0x1A20E,
+			AllowDrawWinHintPgi = 0x1A20F,
+			AllowDrawFrgHintPgi = 0x1A210,
+			AllowDrawMemHintPgi = 0x1A211,
+			StrictDepthfuncHintPgi = 0x1A216,
+			StrictLightingHintPgi = 0x1A217,
+			StrictScissorHintPgi = 0x1A218,
+			FullStippleHintPgi = 0x1A219,
+			ClipNearHintPgi = 0x1A220,
+			ClipFarHintPgi = 0x1A221,
+			WideLineHintPgi = 0x1A222,
+			BackNormalsHintPgi = 0x1A223,
+			VertexDataHintPgi = 0x1A22A,
+			VertexConsistentHintPgi = 0x1A22B,
+			MaterialSideHintPgi = 0x1A22C,
+			MaxVertexHintPgi = 0x1A22D,
+			BinningControlHintQcom = 0x8FB0,
+			ScalebiasHintSgix = 0x8322,
+			TextureMultiBufferHintSgix = 0x812E,
+			PhongHintWin = 0x80EB,
+		}
+	}
+}

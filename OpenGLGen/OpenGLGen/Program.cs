@@ -14,8 +14,8 @@ namespace OpenGLGen
             // Generate OpenGL bindings
             DirectoryInfo workingDirectory = new DirectoryInfo(Path.Combine("..", "..", "..", "..", "Evergine.Bindings.OpenGL"));
             var api = new[] { "gles2" };
-            string namespaceText = "namespace Engine";
-            string nativeClassText = "OPENGL";
+            string namespaceText = "namespace ENGINE.OPENGL";
+            string nativeClassText = "OpenGL";
             GenerateBindings(glFile, workingDirectory, api, namespaceText, nativeClassText);
         }
 
@@ -89,8 +89,8 @@ namespace OpenGLGen
                     // public function
                     StringBuilder function = new StringBuilder($"\t\tpublic static ");
                     BuildReturnType(version, command, function);
-                    // function.Append($" {command.Name.Substring(2)}(");
-                    function.Append($" {command.Name}(");
+                    function.Append($" {command.Name.Substring(2)}(");
+                    // function.Append($" {command.Name}(");
                     BuildParameterList(version, command, function);
                     function.Append($") => p_{command.Name}(");
                     BuildParameterNamesList(command, function);
